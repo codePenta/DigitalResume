@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const sourceHtml = resolve(__dirname, '../index.local.html');
+const sourceHtml = resolve(__dirname, '../index.html');
 const outputPdf = join(__dirname, '../out/lebenslauf.pdf');
 
 const browser = await puppeteer.launch();
