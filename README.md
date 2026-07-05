@@ -11,7 +11,7 @@ Für die Installation der Abhängigkeiten:
 bun install
 ```
 
-To run:
+Für die Ausführung:
 
 ```bash
 bun run startDev
