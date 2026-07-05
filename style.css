@@ -73,6 +73,19 @@ header {
     border-radius: 8px;
 }
 
+/* Only added for privacy reasons */
+.photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-placeholder svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--muted-color);
+}
+
 #full-name {
     height: 100%;
     display: flex;
