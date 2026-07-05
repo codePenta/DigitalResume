@@ -1,3 +1,6 @@
+# Lebenslauf-Projekt
+Statischer, per HTML/CSS gebauter Lebenslauf, als PDF exportiert via Puppeteer.
+
 # Dokumentation
 
 ## Risikoanalyse
@@ -69,4 +72,3 @@
 | Wird von Runtime unterstützt              | 5                          | 5                | 25                | 5            | 25                |
 | Unterstützt gewünschtes Zeitlinien-Design | 5                          | 5                | 25                | 0            | 0                 |
 |                                           |                            |                  | 57                |              | 54                |
-

@@ -1,6 +1,11 @@
-# digitalresume
+# Lebenslauf-Projekt
+Statischer, per HTML/CSS gebauter Lebenslauf, als PDF exportiert via Puppeteer.
 
-To install dependencies:
+Siehe [`docs/Protocol.md`](./docs/Protocol.md) für den eigenständigen Lebenslauf inkl. Entscheidungs- und Risikodokumentation.
+
+# Installation
+
+Für die Installation der Abhängigkeiten:
 
 ```bash
 bun install
@@ -9,7 +14,7 @@ bun install
 To run:
 
 ```bash
-bun run 
+bun run startDev
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Dieses Projekt wurde mit `bun init` in Bun v1.3.14 erstellt. [Bun](https://bun.com) ist eine schnelle All-in-One-JavaScript-Laufzeitumgebung.
