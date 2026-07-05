@@ -1,4 +1,5 @@
 node_modules/
 *.pdf
 .DS_Store
-
+index.local.html
+resources/applicant.png
