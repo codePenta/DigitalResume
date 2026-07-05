@@ -1,0 +1,18 @@
+{
+  "name": "digitalresume",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "apexcharts": "^5.16.0",
+    "bootstrap-icons": "^1.13.1",
+    "puppeteer": "^25.2.1"
+  },
+  "scripts": {
+    "startDev": "bun index.html"
+  }
+}

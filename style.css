@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #1a365d;
+    --text-color: #2d3748;
+    --muted-color: #666666;
+    --border-color: #cccccc;
+    --dot-current: var(--primary-color);
+    --dot-past: #999999;
+}
+
+*,
+*::before,
+*::after {
+    /* Makes it so that padding and borders are included within the defined width and height of element sizes. */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+#resume-content {
+    font-size: 0.85rem;
+    display: grid;
+    align-content: start;
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0 auto;
+    padding: 1.5cm 2cm;
+    background: white;
+    /* Only for web preview */
+    box-shadow: 2px 10px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.icon-badge {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--muted-color);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    display: grid;
+    grid-template-columns: 3.5cm auto min-content;
+    align-items: center;
+    column-gap: 20px;
+    height: 4.5cm;
+    margin-bottom: 1.5cm;
+}
+
+#applicant-photo {
+    grid-column: 1;
+    width: 3.5cm;
+    height: 4.5cm;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#full-name {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    margin-top: auto;
+}
+
+#first,
+#surname {
+    margin: 0;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+#title {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.25;
+}
+
+#contact-details {
+    grid-column: 3;
+    font-size: 10pt;
+    color: var(--muted-color);
+    line-height: 1.6;
+    align-self: center;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.3cm;
+    margin-bottom: 0.15cm;
+}
+
+/* ---------- Main content grid ---------- */
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5cm;
+    align-items: start;
+}
+
+#personal {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 1cm;
+}
+
+#career {
+    grid-column: 2;
+}
+
+.section-label {
+    font-size: 9pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-color);
+    font-weight: 600;
+    margin: 0 0 0.5cm;
+}
+
+/* ---------- Skills ---------- */
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4cm;
+}
+
+.skill-item .skill-name {
+    font-size: 10pt;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 0.1cm;
+}
+
+.skill-track {
+    height: 4px;
+    background: #e5e5e5;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.skill-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* ---------- Hobbies ---------- */
+
+#hobbies ul {
+    margin: 0;
+    padding-left: 1em;
+    font-size: 10pt;
+    line-height: 1.6;
+}
+
+/* ---------- Timeline ---------- */
+
+.timeline-list {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+    border-left: 1px solid var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 0.7cm;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -25.2px;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--dot-past);
+}
+
+.timeline-item.current::before {
+    background: var(--dot-current);
+}
+
+.timeline-date {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 9pt;
+    color: var(--muted-color);
+    margin-bottom: 0.1cm;
+}
+
+.timeline-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 0.1cm;
+}
+
+.timeline-org {
+    font-size: 8pt;
+    color: var(--text-color);
+    margin: 0 0 0.1cm;
+}
+
+.timeline-description {
+    font-size: 8pt;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0 0 0.15cm;
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 15mm;
+        margin: 0;
+    }
+
+    body {
+        background: #fff;
+        font-size: 11pt;
+    }
+
+    #resume-content {
+        margin: 0;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .timeline-item,
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    footer {
+        display: none;
+    }
+}
