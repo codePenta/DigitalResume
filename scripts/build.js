@@ -1,10 +1,16 @@
 import puppeteer from 'puppeteer';
 import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
+import { mkdirSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const sourceHtml = resolve(__dirname, '../index.html');
-const outputPdf = join(__dirname, '../out/lebenslauf.pdf');
+const outputDir = join(__dirname, "../out/");
+
+mkdirSync(outputDir, { recursive: true });
+
+const outputPdf = join(__dirname, '../out/resume.pdf');
+
 
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
@@ -21,4 +27,4 @@ await page.pdf({
 
 await browser.close();
 
-console.log(`✔ PDF erzeugt: ${outputPdf}`);
+console.log(`✔ PDF created: ${outputPdf}`);
