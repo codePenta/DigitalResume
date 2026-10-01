@@ -5,6 +5,20 @@ Siehe [`docs/Protocol.md`](./docs/Protocol.md) für den eigenständigen Lebensla
 
 # Installation
 
+## Repository klonen
+
+```bash
+git clone --recurse-submodules https://github.com/codePenta/DigitalResume.git
+```
+
+Die echten Lebenslauf-Daten (Kontaktdaten, Foto, Werdegang) liegen im privaten Repository `DigitalResume-Private`, das als Submodule unter `private/` eingebunden ist. Ohne Zugriff darauf bleibt `private/` leer und es wird die öffentliche Vorlage `index.html` verwendet.
+
+Bereits ohne Submodule geklont? Dann nachholen mit:
+
+```bash
+git submodule update --init
+```
+
 ## Für die Abhängigkeiten:
 
 ```bash
@@ -21,7 +35,16 @@ oder
 bun startDev
 ```
 
+Mit echten Daten (Zugriff auf das Submodule vorausgesetzt):
+
+```bash
+bun run startPrivate
+```
+
 ## Um den Lebenslauf zu bauen:
+
+Das Build-Skript verwendet automatisch `private/index.html`, falls vorhanden, sonst die Vorlage.
+
 
 ```bash
 bun run scripts/build.js

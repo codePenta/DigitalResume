@@ -13,6 +13,7 @@
     "puppeteer": "^25.2.1"
   },
   "scripts": {
-    "startDev": "bun index.html"
+    "startDev": "bun index.html",
+    "startPrivate": "bun private/index.html"
   }
 }

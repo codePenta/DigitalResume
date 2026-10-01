@@ -1,10 +1,12 @@
 import puppeteer from 'puppeteer';
 import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
-import { mkdirSync } from 'fs';
+import { existsSync, mkdirSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const sourceHtml = resolve(__dirname, '../index.html');
+// Echte Daten liegen im privaten Submodule `private/`; ohne Zugriff wird die Vorlage gebaut.
+const privateHtml = resolve(__dirname, '../private/index.html');
+const sourceHtml = existsSync(privateHtml) ? privateHtml : resolve(__dirname, '../index.html');
 const outputDir = join(__dirname, "../out/");
 
 mkdirSync(outputDir, { recursive: true });
