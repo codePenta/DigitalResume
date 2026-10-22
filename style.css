@@ -69,8 +69,15 @@ header {
     grid-column: 1;
     width: 3.5cm;
     height: 4.5cm;
-    object-fit: cover;
     border-radius: 8px;
+    overflow: hidden;
+}
+
+#applicant-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Only added for privacy reasons */
@@ -153,12 +160,12 @@ header {
     font-size: 9pt;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--muted-color);
+    color: var(--primary-color);
     font-weight: 600;
     margin: 0 0 0.5cm;
 }
 
-/* ---------- Skills ---------- */
+/* ---------- Skills & Sprachen ---------- */
 
 .skill-list {
     display: flex;
@@ -184,6 +191,28 @@ header {
     height: 100%;
     background: var(--primary-color);
     border-radius: 2px;
+}
+
+.skill-group {
+    margin-bottom: 0.35cm;
+}
+
+.skill-group:last-child {
+    margin-bottom: 0;
+}
+
+.skill-level {
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 0.1cm;
+}
+
+.skill-tags {
+    font-size: 9pt;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
 }
 
 /* ---------- Hobbies ---------- */
@@ -253,12 +282,23 @@ header {
     margin: 0 0 0.15cm;
 }
 
+.timeline-points {
+    margin: 0.1cm 0 0;
+    padding-left: 1.1em;
+    font-size: 8pt;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.timeline-points li {
+    margin-bottom: 0.05cm;
+}
+
 /* ---------- Print ---------- */
 
 @media print {
     @page {
         size: A4;
-        margin: 15mm;
         margin: 0;
     }
 
