@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "apexcharts": "^5.16.0",
-    "bootstrap-icons": "^1.13.1",
-    "puppeteer": "^25.2.1"
+    "bootstrap-icons": "^1.13.2",
+    "puppeteer": "^25.15.0"
   },
   "scripts": {
     "startDev": "bun index.html"
