@@ -4,7 +4,6 @@ import { dirname, join, resolve } from 'path';
 import { existsSync, mkdirSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-// Echte Daten liegen im privaten Submodule `private/`; ohne Zugriff wird die Vorlage gebaut.
 const privateHtml = resolve(__dirname, '../private/index.html');
 const sourceHtml = existsSync(privateHtml) ? privateHtml : resolve(__dirname, '../index.html');
 const outputDir = join(__dirname, "../out/");
