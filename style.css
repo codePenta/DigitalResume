@@ -47,8 +47,8 @@ body {
 }
 
 .icon {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     stroke: var(--muted-color);
     stroke-width: 2;
     fill: none;
